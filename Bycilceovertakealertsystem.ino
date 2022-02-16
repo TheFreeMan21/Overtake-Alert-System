@@ -1,5 +1,5 @@
-const int trigPin = 8;
-const int echoPin = 9;
+const int trigPin = 9;
+const int echoPin = 8;
 const int pwmPin = 5;
 int x=0;
 int y=0;
