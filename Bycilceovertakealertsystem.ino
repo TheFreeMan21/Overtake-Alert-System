@@ -12,6 +12,7 @@ void setup()
   Serial.begin(115200);
   pinMode(trigPin, OUTPUT);
   pinMode(echoPin, INPUT);
+  pinMode(pwmPin, OUTPUT);
 }
 
 void loop() 
@@ -33,9 +34,9 @@ void loop()
   if(y-x>=90&&x<200)
   {
     Serial.print("Someone comes");
-    analogWrite(pwmPin,255);
+    digitalWrite(pwmPin,HIGH);
     delay(1000);
-    analogWrite(pwmPin,0);
+    digitalWrite(pwmPin,LOW);
   }
   else
     if(x<200)
